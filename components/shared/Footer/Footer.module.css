@@ -1,0 +1,35 @@
+#container {
+  display: flex;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: var(--txt);
+  gap: 50%;
+  color: var(--bg);
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#heading {
+  font-size: xx-large;
+  font-family: var(--oswald);
+  font-weight: 600;
+}
+
+#title {
+  font-size: x-large;
+}
+
+.link {
+  color: grey;
+  text-decoration: none;
+}
+
+@media (orientation: portrait) {
+  #container {
+    display: none;
+  }
+}

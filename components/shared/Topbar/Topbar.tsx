@@ -1,16 +1,23 @@
 import Link from 'next/link';
+import styles from './Topbar.module.css';
 
 const Topbar = () => {
   return (
-    <div>
-      <div>
-        <span>Kunal.</span>
-        <div>
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/work">Work</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
+    <div id={styles.container}>
+      <span id={styles.logo}>Kunal.</span>
+      <div id={styles.right}>
+        <Link href="/" className={styles.link}>
+          Home
+        </Link>
+        <Link href="/about" className={styles.link}>
+          About
+        </Link>
+        <Link href="/work" className={styles.link}>
+          Work
+        </Link>
+        <Link href="/contact" className={styles.link}>
+          Contact
+        </Link>
       </div>
     </div>
   );

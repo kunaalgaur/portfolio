@@ -1,13 +1,21 @@
-import { Poppins } from 'next/font/google';
+import { Oswald, Poppins } from 'next/font/google';
 import './globals.css';
 import { Metadata } from 'next';
 import Topbar from '@/components/shared/Topbar/Topbar';
-import Bottombar from '@/components/shared/Bottombar/Bottombar';
+import Footer from '@/components/shared/Footer/Footer';
 
 const poppins = Poppins({
   subsets: ['devanagari', 'latin', 'latin-ext'],
   weight: ['300', '400', '500', '600'],
   style: 'normal',
+  variable: '--poppins',
+});
+
+const oswald = Oswald({
+  subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext', 'vietnamese'],
+  weight: ['300', '400', '500', '600'],
+  style: 'normal',
+  variable: '--oswald',
 });
 
 const metadata: Metadata = {
@@ -18,11 +26,11 @@ const metadata: Metadata = {
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html className={poppins.className}>
+    <html className={`${poppins.variable} ${oswald.variable}`}>
       <body suppressHydrationWarning={true}>
         <Topbar />
         {children}
-        <Bottombar />
+        <Footer />
       </body>
     </html>
   );
