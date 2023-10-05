@@ -1,0 +1,40 @@
+#container {
+    height: 100%;
+    width: 200px;
+    backdrop-filter: blur(20px);
+    background-color: #8080801e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#icon {
+    font-size: 2rem;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#name {
+    font-family: var(--space-grotesk);
+}
+
+#project {
+    font-size: small;
+    color: grey;
+}
+
+@media (orientation: portrait) {
+    #container {
+        height: calc(100% / 3);
+    }
+
+    #wrapper {
+        height: 100%;
+        flex-direction: column;
+    }
+}
