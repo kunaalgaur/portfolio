@@ -1,27 +1,23 @@
-import { socials } from '@/constants/socials';
-import Link from 'next/link';
+import React from 'react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
-  return (
-    <div id={styles.container}>
-      <div className={styles.children}>
-        <span id={styles.heading}>Kunal Gaur</span>
-        <span id={styles.text}>Portfolio @ 2023-24</span>
-      </div>
-
-      <div className={styles.children}>
-        <span id={styles.title}>Find me on.</span>
-        {socials.map((social) => {
-          return (
-            <Link href={social.link} className={styles.link}>
-              {social.name}
-            </Link>
-          );
-        })}
-      </div>
-    </div>
-  );
+    return (
+        <div id={styles.container}>
+            <div id={styles.outerWrapper}>
+                <div id={styles.innerWrapper}>
+                    <span id={styles.text}>Kunal</span>
+                    <span id={styles.text}>
+                        Gaur<span id={styles.textSpan}>.</span>
+                    </span>
+                    <div id={styles.socialLinks}></div>
+                    <span id={styles.copyright}>
+                        &copy; 2023 Kunal. All rights reserved
+                    </span>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default Footer;
