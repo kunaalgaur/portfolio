@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kunal Gaur's Portfolio
 
-## Getting Started
+Welcome to my portfolio! This repository showcases my projects, skills, and contributions. Feel free to explore and learn more about my work.
 
-First, run the development server:
+## About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+I'm a passionate software developer with a strong interest in [mention your specific areas of interest or expertise, e.g., web development, machine learning, etc.]. I love to create innovative solutions and collaborate on exciting projects.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   **Name:** Kunal Gaur
+-   **GitHub:** [kunaalgaur](https://github.com/kunaalgaur)
+-   **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/kunal-gaur-714621200/)
+-   **Email:** kunal_gaur@outlook.com
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Here are some of the projects I've worked on:
 
-## Learn More
+### Project 1: [Thread social media project](https://github.com/kunaalgaur/threads)
 
-To learn more about Next.js, take a look at the following resources:
+Brief description of the project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   Technologies used: TypeScript, NodeJs, MongoDB, NextJs and its features.
+-   Key features: Implemented pagination and connectivity with other users.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Project 2: [Project Name](https://github.com/kunaalgaur/shopcart)
 
-## Deploy on Vercel
+Brief description of the project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   Technologies used: List the technologies or programming languages used.
+-   Key features: Highlight the main features or achievements of the project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+...
+
+## Skills
+
+List some of your key skills and technologies you're proficient in:
+
+-   Programming Languages: JavaScript and TypeScript
+-   Web Development: HTML, CSS, React, Node.js, Express.js, Next etc.
+-   Database: MongoDB, MySQL
+
+## Contact
+
+You can reach out to me through the following channels:
+
+-   **GitHub:** [kunaalgaur](https://github.com/kunaalgaur)
+-   **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/kunal-gaur-714621200/)
+-   **Email:** kunal_gaur@outlook.com
+
+Feel free to connect, and I'm open to collaborations and discussions about any interesting projects or opportunities.
+
+Thank you for visiting my portfolio!
