@@ -20,7 +20,6 @@ const sacramento = Sacramento({
 const metadata: Metadata = {
     title: 'Kunal Gaur',
     description: 'Kunal Gaur, a full stack web developers portfolio.',
-    applicationName: 'portfolio',
 };
 
 const layout = ({ children }: { children: React.ReactNode }) => {
