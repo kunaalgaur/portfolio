@@ -1,0 +1,42 @@
+#container {
+    padding: 0 30%;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(http://localhost:3000/bg.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    gap: 30px;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+}
+
+#heading {
+    font-family: var(--space-grotesk);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#left {
+    font-family: var(--sacramento);
+    font-size: 2rem;
+}
