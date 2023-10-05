@@ -1,39 +1,37 @@
-import { Oswald, Poppins } from 'next/font/google';
+import { Oswald, Poppins, Sacramento, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Metadata } from 'next';
-import Topbar from '@/components/shared/Topbar/Topbar';
 import Footer from '@/components/shared/Footer/Footer';
 
-const poppins = Poppins({
-  subsets: ['devanagari', 'latin', 'latin-ext'],
-  weight: ['300', '400', '500', '600'],
-  style: 'normal',
-  variable: '--poppins',
+const space_grotesk = Space_Grotesk({
+    subsets: ['latin', 'latin-ext', 'vietnamese'],
+    weight: ['300', '400', '500', '600', '700'],
+    style: 'normal',
+    variable: '--space-grotesk',
 });
 
-const oswald = Oswald({
-  subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext', 'vietnamese'],
-  weight: ['300', '400', '500', '600'],
-  style: 'normal',
-  variable: '--oswald',
+const sacramento = Sacramento({
+    subsets: ['latin', 'latin-ext'],
+    weight: ['400'],
+    style: 'normal',
+    variable: '--sacramento',
 });
 
 const metadata: Metadata = {
-  title: 'Kunal Gaur',
-  description: 'Kunal Gaur, a full stack web developers portfolio.',
-  applicationName: 'portfolio',
+    title: 'Kunal Gaur',
+    description: 'Kunal Gaur, a full stack web developers portfolio.',
+    applicationName: 'portfolio',
 };
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <html className={`${poppins.variable} ${oswald.variable}`}>
-      <body suppressHydrationWarning={true}>
-        <Topbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+    return (
+        <html className={`${sacramento.variable} ${space_grotesk.variable}`}>
+            <body suppressHydrationWarning={true}>
+                {children}
+                <Footer />
+            </body>
+        </html>
+    );
 };
 
 export default layout;
