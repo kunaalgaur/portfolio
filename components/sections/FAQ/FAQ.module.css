@@ -1,0 +1,22 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#chip {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-size: small;
+}
+
+#heading {
+    font-size: xx-large;
+    font-weight: 600;
+    text-align: center;
+}
+
