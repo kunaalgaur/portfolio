@@ -1,0 +1,33 @@
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #071c2a;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#heading {
+    font-size: larger;
+}
+
+#top {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: small;
+    cursor: pointer;
+}
+
+@media (orientation: portrait) {
+    #container {
+        padding: 10px;
+    }
+}
