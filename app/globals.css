@@ -1,18 +1,11 @@
-:root {
-    --bg: #000000;
-    --txt: #ffffff;
-    --txt2: #808080;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: var(--space-grotesk);
+    font-family: var(--space_grotesk);
 }
 
 body {
     background-color: #000000;
-    color: var(--txt);
+    color: white;
 }
