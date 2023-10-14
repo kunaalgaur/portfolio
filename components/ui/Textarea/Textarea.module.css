@@ -1,0 +1,25 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textarea {
+    height: 100px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid white;
+    background: none;
+    padding: 0 5px;
+    color: white;
+    padding: 5px;
+}
+
+.textarea:focus {
+    border: 2px solid #a7d129;
+    color: #a7d129;
+}
+
+.textarea:focus > #text {
+    color: #a7d129;
+}
