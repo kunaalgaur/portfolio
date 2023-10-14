@@ -1,31 +1,44 @@
-import { Oswald, Poppins, Sacramento, Space_Grotesk } from 'next/font/google';
+import Topbar from '@/components/shared/Topbar/Topbar';
 import './globals.css';
-import { Metadata } from 'next';
 import Footer from '@/components/shared/Footer/Footer';
+import { Homemade_Apple, Poppins, Space_Grotesk } from 'next/font/google';
+import { Metadata } from 'next';
+import { Toaster } from 'react-hot-toast';
 
 const space_grotesk = Space_Grotesk({
-    subsets: ['latin', 'latin-ext', 'vietnamese'],
     weight: ['300', '400', '500', '600', '700'],
+    subsets: ['latin', 'latin-ext', 'vietnamese'],
+    variable: '--space_grotesk',
     style: 'normal',
-    variable: '--space-grotesk',
 });
 
-const sacramento = Sacramento({
-    subsets: ['latin', 'latin-ext'],
+const poppins = Poppins({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: ['400', '500', '600'],
+    variable: '--poppins',
+});
+
+const homemade_apple = Homemade_Apple({
     weight: ['400'],
     style: 'normal',
-    variable: '--sacramento',
+    subsets: ['latin'],
+    variable: '--homemade-apple',
 });
 
-const metadata: Metadata = {
-    title: 'Kunal Gaur',
-    description: 'Kunal Gaur, a full stack web developers portfolio.',
+export const metadata: Metadata = {
+    title: 'Kunal Gaur - Portfolio',
+    description: 'Kunal Gaur, a full stack developer portfolio.',
 };
 
-const layout = ({ children }: { children: React.ReactNode }) => {
+const AppLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <html className={`${sacramento.variable} ${space_grotesk.variable}`}>
-            <body suppressHydrationWarning={true}>
+        <html lang="en">
+            <body
+                suppressHydrationWarning={true}
+                className={`${space_grotesk.variable} ${homemade_apple.variable} ${poppins.variable}`}>
+                <Toaster position="top-center" reverseOrder={false} />
+                <Topbar />
                 {children}
                 <Footer />
             </body>
@@ -33,4 +46,4 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     );
 };
 
-export default layout;
+export default AppLayout;
