@@ -7,23 +7,7 @@ import { CiMail, CiPhone } from 'react-icons/ci';
 
 const Contact = () => {
     return (
-        <motion.section
-            id={styles.container}
-            initial={{
-                opacity: 0,
-                filter: 'blur(10px)',
-            }}
-            whileInView={{
-                opacity: 1,
-                filter: 'blur(0)',
-            }}
-            viewport={{ once: true }}
-            transition={{
-                type: 'spring',
-                damping: 10,
-                stiffness: 100,
-                duration: '0.3s',
-            }}>
+        <section id={styles.container}>
             <div id={styles.left}>
                 <div id={styles.wrapper}>
                     <motion.span
@@ -122,7 +106,7 @@ const Contact = () => {
             <div id={styles.right}>
                 <ContactForm />
             </div>
-        </motion.section>
+        </section>
     );
 };
 
