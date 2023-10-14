@@ -1,0 +1,43 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 2px solid white;
+    width: 40%;
+    border-radius: 20px;
+    font-size: small;
+}
+
+#questionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #80808055;
+}
+
+#questionContainer:last-child {
+    border: none;
+}
+
+#question {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#answer {
+    color: grey;
+}
+
+@media (orientation: portrait) {
+    #container {
+        width: 90%;
+    }
+}
