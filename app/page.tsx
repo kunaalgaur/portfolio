@@ -1,15 +1,20 @@
-import Home from '@/components/card/Home/Home';
-import Services from '@/components/card/Services/Services';
-import Work from '@/components/card/Work/Work';
-import React from 'react';
+import Contact from '@/components/sections/Contact/Contact';
+import FAQ from '@/components/sections/FAQ/FAQ';
+import Home from '@/components/sections/Home/Home';
+import Journal from '@/components/sections/Journal/Journal';
+import Services from '@/components/sections/Services/Services';
+import Work from '@/components/sections/Work/Work';
 
 const page = () => {
     return (
-        <div>
+        <>
             <Home />
             <Services />
             <Work />
-        </div>
+            <Journal />
+            <Contact />
+            <FAQ />
+        </>
     );
 };
 
