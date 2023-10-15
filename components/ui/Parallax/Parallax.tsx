@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './Parallax.module.css';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 type Props = {
@@ -9,43 +9,42 @@ type Props = {
 };
 
 const Parallax = ({ image, children }: Props) => {
-    const [scrollY, setScrollY] = useState<number>(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollY(window.scrollY);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    const { scrollYProgress } = useScroll();
+    const y = useTransform(scrollYProgress, [0, 1], ['0%', '-100%']);
     return (
-        <div id={styles.container}>
-            <motion.div
-                initial={{ y: 0 }}
-                animate={{ y: -scrollY * 0.5 }}
-                transition={{
-                    type: 'spring',
-                    damping: 10,
-                    stiffness: 100,
-                    duration: '0.3s',
-                }}
-                id={styles.wrapper}>
+        <motion.div
+            id={styles.container}
+            initial={{
+                opacity: 0,
+                filter: 'blur(5px)',
+                y: '100%',
+            }}
+            whileInView={{
+                opacity: 1,
+                filter: 'blur(0)',
+                y: '0%',
+            }}
+            viewport={{ once: true }}
+            transition={{
+                type: 'spring',
+                damping: 10,
+                stiffness: 100,
+                duration: '0.3s',
+            }}>
+            <motion.div id={styles.wrapper} style={{ y }}>
                 <Image
                     src={image}
-                    alt="Error loading image."
+                    alt="error loading image"
                     height={0}
                     width={0}
-                    style={{ height: '300%', width: '100%' }}
-                    id={styles.image}
+                    style={{ height: '200%', width: '100%' }}
                     unoptimized
+                    id={styles.image}
                 />
+                {children}
             </motion.div>
             {children}
-        </div>
+        </motion.div>
     );
 };
 

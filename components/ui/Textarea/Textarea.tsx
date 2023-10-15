@@ -8,18 +8,19 @@ type Props = {
     text: string;
     id?: string;
     name?: string;
-    placeholder: string;
+    value: string;
+    defaultValue: string;
     onChange: React.ChangeEventHandler<HTMLTextAreaElement> | undefined;
 };
 
-const Textarea = ({ text, id, name, onChange, placeholder }: Props) => {
+const Textarea = ({ text, id, name, onChange, value, defaultValue }: Props) => {
     return (
         <label htmlFor={name} id={styles.container}>
             <motion.span
                 id={styles.text}
                 initial={{
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(5px)',
                     y: '100%',
                 }}
                 whileInView={{
@@ -43,7 +44,7 @@ const Textarea = ({ text, id, name, onChange, placeholder }: Props) => {
                 onChange={onChange}
                 initial={{
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(5px)',
                     y: '100%',
                 }}
                 whileInView={{
@@ -57,9 +58,8 @@ const Textarea = ({ text, id, name, onChange, placeholder }: Props) => {
                     damping: 10,
                     stiffness: 100,
                     duration: '0.3s',
-                }}>
-                {placeholder}
-            </motion.textarea>
+                }}
+                defaultValue={defaultValue}></motion.textarea>
         </label>
     );
 };

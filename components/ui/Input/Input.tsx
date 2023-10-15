@@ -20,7 +20,7 @@ const Input = ({ text, type, id, name, onChange, placeholder }: Props) => {
                 id={styles.text}
                 initial={{
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(5px)',
                     y: '100%',
                 }}
                 whileInView={{
@@ -46,7 +46,7 @@ const Input = ({ text, type, id, name, onChange, placeholder }: Props) => {
                 placeholder={placeholder}
                 initial={{
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(5px)',
                     y: '100%',
                 }}
                 whileInView={{

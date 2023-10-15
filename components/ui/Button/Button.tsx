@@ -13,7 +13,7 @@ const Button = ({ text }: Props) => {
             id={styles.button}
             initial={{
                 opacity: 0,
-                filter: 'blur(10px)',
+                filter: 'blur(5px)',
                 y: '100%',
             }}
             whileInView={{
