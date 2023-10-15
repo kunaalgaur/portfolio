@@ -1,0 +1,33 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 15%;
+    min-height: 100vh;
+}
+
+#heading {
+    font-size: xx-large;
+    color: #a7d129;
+    font-weight: 600;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+@media (orientation: portrait) {
+    #container {
+        padding: 10px;
+    }
+
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,19 +1,80 @@
+'use client';
+
 import React from 'react';
 import styles from './Journal.module.css';
 import JournalCard from '@/components/card/JournalCard/JournalCard';
+import { motion } from 'framer-motion';
 
 const Journal = () => {
     return (
         <div id={styles.container}>
             <div id={styles.top}>
                 <div id={styles.left}>
-                    <span id={styles.heading}>Take a look</span>
-                    <span id={styles.heading}>
+                    <motion.span
+                        id={styles.heading}
+                        initial={{
+                            opacity: 0,
+                            filter: 'blur(5px)',
+                            y: '100%',
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            filter: 'blur(0)',
+                            y: '0%',
+                        }}
+                        viewport={{ once: true }}
+                        transition={{
+                            type: 'spring',
+                            damping: 10,
+                            stiffness: 100,
+                            duration: '0.3s',
+                        }}>
+                        Take a look
+                    </motion.span>
+                    <motion.span
+                        id={styles.heading}
+                        initial={{
+                            opacity: 0,
+                            filter: 'blur(5px)',
+                            y: '100%',
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            filter: 'blur(0)',
+                            y: '0%',
+                        }}
+                        viewport={{ once: true }}
+                        transition={{
+                            type: 'spring',
+                            damping: 10,
+                            stiffness: 100,
+                            duration: '0.3s',
+                        }}>
                         At my <span id={styles.span}>Journal</span>
-                    </span>
+                    </motion.span>
                 </div>
 
-                <span id={styles.button}>See All</span>
+                <motion.span
+                    id={styles.button}
+                    initial={{
+                        opacity: 0,
+                        filter: 'blur(5px)',
+                        y: '100%',
+                    }}
+                    whileInView={{
+                        opacity: 1,
+                        filter: 'blur(0)',
+                        y: '0%',
+                    }}
+                    viewport={{ once: true }}
+                    transition={{
+                        type: 'spring',
+                        damping: 10,
+                        stiffness: 100,
+                        duration: '0.3s',
+                    }}>
+                    See All
+                </motion.span>
             </div>
 
             <div id={styles.bottom}>

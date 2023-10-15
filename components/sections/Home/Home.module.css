@@ -1,0 +1,60 @@
+#container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(http://localhost:3000/bg.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: brightness(50%);
+}
+
+#image {
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: -30px;
+    z-index: -2;
+}
+
+#heading {
+    font-size: 3rem;
+    position: relative;
+}
+
+#heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+#button {
+    background-color: #a7d129;
+    font-weight: 500;
+    font-size: large;
+    padding: 5px 10px;
+    color: black;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+}
+
+@media (orientation: portrait) {
+    #heading {
+        font-size: xx-large;
+    }
+}
