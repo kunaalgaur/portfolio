@@ -5,6 +5,10 @@
     font-family: var(--space_grotesk);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #000000;
     color: white;
