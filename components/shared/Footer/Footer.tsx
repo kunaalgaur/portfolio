@@ -12,7 +12,7 @@ const Footer = () => {
                 id={styles.outerWrapper}
                 initial={{
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(5px)',
                 }}
                 whileInView={{
                     opacity: 1,
@@ -29,7 +29,7 @@ const Footer = () => {
                     id={styles.innerWrapper}
                     initial={{
                         opacity: 0,
-                        filter: 'blur(10px)',
+                        filter: 'blur(5px)',
                     }}
                     whileInView={{
                         opacity: 1,
@@ -47,7 +47,7 @@ const Footer = () => {
                             className={styles.text}
                             initial={{
                                 opacity: 0,
-                                filter: 'blur(10px)',
+                                filter: 'blur(5px)',
                                 y: '100%',
                             }}
                             whileInView={{
@@ -68,7 +68,7 @@ const Footer = () => {
                             className={styles.text}
                             initial={{
                                 opacity: 0,
-                                filter: 'blur(10px)',
+                                filter: 'blur(5px)',
                                 y: '100%',
                             }}
                             whileInView={{
@@ -94,7 +94,7 @@ const Footer = () => {
                                         target="__blank"
                                         initial={{
                                             opacity: 0,
-                                            filter: 'blur(10px)',
+                                            filter: 'blur(5px)',
                                             y: '100%',
                                         }}
                                         whileInView={{

@@ -16,7 +16,7 @@ const FAQCard = () => {
             id={styles.container}
             initial={{
                 opacity: 0,
-                filter: 'blur(10px)',
+                filter: 'blur(5px)',
             }}
             whileInView={{
                 opacity: 1,
@@ -38,7 +38,7 @@ const FAQCard = () => {
                         id={styles.questionContainer}
                         initial={{
                             opacity: 0,
-                            filter: 'blur(10px)',
+                            filter: 'blur(5px)',
                             y: '100%',
                         }}
                         whileInView={{
