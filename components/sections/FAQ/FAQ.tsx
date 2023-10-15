@@ -12,7 +12,7 @@ const FAQ = () => {
                 id={styles.chip}
                 initial={{
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(5px)',
                     y: '100%',
                 }}
                 whileInView={{
@@ -33,7 +33,7 @@ const FAQ = () => {
                 id={styles.heading}
                 initial={{
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(5px)',
                     y: '100%',
                 }}
                 whileInView={{
