@@ -31,7 +31,7 @@ const ContactForm = () => {
             onSubmit={handleSubmit}
             initial={{
                 opacity: 0,
-                filter: 'blur(10px)',
+                filter: 'blur(5px)',
             }}
             whileInView={{
                 opacity: 1,
@@ -48,7 +48,7 @@ const ContactForm = () => {
                 id={styles.heading}
                 initial={{
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(5px)',
                     y: '100%',
                 }}
                 whileInView={{
@@ -82,7 +82,7 @@ const ContactForm = () => {
                             }}
                             initial={{
                                 opacity: 0,
-                                filter: 'blur(10px)',
+                                filter: 'blur(5px)',
                                 y: '100%',
                             }}
                             whileInView={{
@@ -122,7 +122,8 @@ const ContactForm = () => {
                 name="textarea"
                 text="Please write you message."
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="eg: Hey Kunal, Nice work man, I would like to hire you."
+                defaultValue="eg: Hey Kunal, Nice work man, I would like to hire you."
+                value=""
             />
             <Button text="Send Message" />
         </motion.form>
