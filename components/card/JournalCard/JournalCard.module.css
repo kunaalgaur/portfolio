@@ -1,9 +1,45 @@
 #container {
-    height: 100% !important;
+    height: 100%;
     width: 100%;
+    z-index: 100;
 }
 
 #link {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    font-family: var(--poppins);
+    text-decoration: none;
+    backdrop-filter: brightness(40%);
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    grid-area: 10px;
+}
+
+#chip {
+    border: 1px solid grey;
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+#heading {
+    font-size: larger;
+}
+
+#text {
+    font-size: small;
+}
+
+@media (orientation: portrait) {
+    #heading {
+        font-size: 1rem;
+    }
 }

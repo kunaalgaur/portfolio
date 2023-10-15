@@ -1,0 +1,21 @@
+#container {
+    backdrop-filter: blur(10px);
+    background-color: #ffffff0b;
+    border: 1px solid #85858555;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 30vh;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#projects {
+    font-size: small;
+    color: grey;
+}
