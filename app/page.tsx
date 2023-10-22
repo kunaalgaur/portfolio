@@ -1,3 +1,5 @@
+'use client';
+
 import Contact from '@/components/sections/Contact/Contact';
 import FAQ from '@/components/sections/FAQ/FAQ';
 import Home from '@/components/sections/Home/Home';
