@@ -1,3 +1,5 @@
+'use client';
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const hirePopup = localStorage?.getItem('hire-popup');
