@@ -17,7 +17,7 @@ const Hire = () => {
                 <div
                     id={styles.background}
                     onClick={() => {
-                        localStorage?.setItem('hire-popup', 'shown');
+                        // localStorage?.setItem('hire-popup', 'shown');
                         dispatch(hide_popup());
                     }}></div>
                 <div id={styles.wrapper}>
@@ -25,7 +25,7 @@ const Hire = () => {
                         <span id={styles.heading}>Hello there!</span>
                         <BsXLg
                             onClick={() => {
-                                localStorage?.setItem('hire-popup', 'shown');
+                                // localStorage?.setItem('hire-popup', 'shown');
                                 dispatch(hide_popup());
                             }}
                             id={styles.icon}
