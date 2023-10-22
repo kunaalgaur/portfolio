@@ -24,3 +24,23 @@
     font-size: xx-large;
     font-weight: 600;
 }
+
+#right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    color: #000000;
+    font-size: large;
+    text-decoration: none;
+}
+
+@media (orientation: portrait) {
+    #container {
+        padding: 20%;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 2fr;
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Menu.module.css';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Menu = ({ toggle }: { toggle: boolean }) => {
     return (
@@ -25,7 +26,23 @@ const Menu = ({ toggle }: { toggle: boolean }) => {
                     All rights reserved. Copyright &copy; 2023-24
                 </span>
             </div>
-            <div id={styles.right}></div>
+            <div id={styles.right}>
+                <Link href="/" className={styles.link}>
+                    Home
+                </Link>
+                <Link href="/about" className={styles.link}>
+                    Aboout
+                </Link>
+                <Link href="/work" className={styles.link}>
+                    Work
+                </Link>
+                <a href="/" className={styles.link}>
+                    Contact
+                </a>
+                <Link href="/blogs" className={styles.link}>
+                    Blogs
+                </Link>
+            </div>
         </motion.div>
     );
 };
