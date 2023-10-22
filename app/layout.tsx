@@ -4,6 +4,8 @@ import Footer from '@/components/shared/Footer/Footer';
 import { Homemade_Apple, Poppins, Space_Grotesk } from 'next/font/google';
 import { Metadata } from 'next';
 import { Toaster } from 'react-hot-toast';
+import Hire from '@/components/popups/Hire/Hire';
+import { Providers } from '@/redux/providers';
 
 const space_grotesk = Space_Grotesk({
     weight: ['300', '400', '500', '600', '700'],
@@ -37,10 +39,13 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             <body
                 suppressHydrationWarning={true}
                 className={`${space_grotesk.variable} ${homemade_apple.variable} ${poppins.variable}`}>
-                <Toaster position="top-center" reverseOrder={false} />
-                <Topbar />
-                {children}
-                <Footer />
+                <Providers>
+                    <Toaster position="top-center" reverseOrder={false} />
+                    <Hire />
+                    <Topbar />
+                    {children}
+                    <Footer />
+                </Providers>
             </body>
         </html>
     );
