@@ -1,0 +1,30 @@
+#button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+#left {
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    background-color: #a7d129;
+    border-radius: 50%;
+}
+
+#icon {
+    font-size: x-large;
+    color: black;
+    cursor: pointer;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+}
