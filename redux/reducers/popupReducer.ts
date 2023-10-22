@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const InitialState: boolean = localStorage?.getItem('hire-popup') ? false : true;
+const hirePopup = localStorage?.getItem('hire-popup');
+
+const InitialState: boolean = (hirePopup as string) ? false : true;
 
 const popup = createSlice({
     name: 'POPUP REDUCER',
