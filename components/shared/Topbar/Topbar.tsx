@@ -11,7 +11,9 @@ const Topbar = () => {
     return (
         <>
             <div id={styles.button} onClick={() => setToggle(!toggle)}>
-                <div id={styles.left}>
+                <div
+                    id={styles.left}
+                    style={{ backgroundColor: toggle ? 'white' : '#a7d129' }}>
                     <BsFilterLeft id={styles.icon} />
                 </div>
                 <div id={styles.right}>
