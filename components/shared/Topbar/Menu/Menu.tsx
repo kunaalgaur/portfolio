@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Menu.module.css';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { links } from '@/constants/links';
 
 const Menu = ({ toggle }: { toggle: boolean }) => {
     return (
@@ -27,21 +28,21 @@ const Menu = ({ toggle }: { toggle: boolean }) => {
                 </span>
             </div>
             <div id={styles.right}>
-                <Link href="/" className={styles.link}>
-                    Home
-                </Link>
-                <Link href="/about" className={styles.link}>
-                    Aboout
-                </Link>
-                <Link href="/work" className={styles.link}>
-                    Work
-                </Link>
-                <a href="/" className={styles.link}>
-                    Contact
-                </a>
-                <Link href="/blogs" className={styles.link}>
-                    Blogs
-                </Link>
+                {links.map((link, index) => {
+                    if (link.isPageDifferent) {
+                        return (
+                            <Link href={link.link} key={index}>
+                                {link.name}
+                            </Link>
+                        );
+                    }
+
+                    return (
+                        <a href={link.link} key={index}>
+                            {link.name}
+                        </a>
+                    );
+                })}
             </div>
         </motion.div>
     );
